@@ -27,12 +27,13 @@
                 android:layout_height="match_parent"
                 android:layout_margin="7dp"
                 android:orientation="vertical">
+
                 <ImageView
 
                     android:id="@+id/imageView59"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:background="#212121"/>
+                    android:background="#212121" />
 
                 <ImageView
 
@@ -41,12 +42,110 @@
                     android:layout_height="82dp"
                     android:background="@drawable/border2" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="700dp"
-                    android:background="#ffffff">
-                    <!-- TODO -->
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:background="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/validTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:text="Valid to 2/26/18 10:08"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:text="Zone TROMSO - Zone Vikran"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_marginEnd="20dp"
+                            android:layout_width="190dp"
+                            android:layout_height="match_parent"
+                            android:gravity="start|center_vertical"                            >
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:scaleType="fitXY"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:src="@drawable/gifload2"/>
+
+
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+                            android:layout_marginEnd="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_condensed_bold"
+                                android:text="02:14:57"
+                                android:textAlignment="center"
+                                android:textColor="#8BAF3F"
+                                android:textSize="27sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View android:id="@+id/tile_divider"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000000"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                         />
+
+                    <View android:id="@+id/tile_divider2"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="#000000"
+                        />
+                    <View android:id="@+id/tile_divider3"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000000"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        />
+
+
+
+                </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
