@@ -44,7 +44,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="700dp"
+                    android:layout_height="470dp"
                     android:background="#ffffff"
                     android:gravity="center_horizontal"
                     android:orientation="vertical">
@@ -287,7 +287,63 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                app:srcCompat="@mipmap/ic_launcher" />
+                                app:srcCompat="@drawable/ic_bus" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="99dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="start|center_vertical"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                app:srcCompat="@drawable/tromskortet_logo" />
+
+                            <TextView
+                                android:id="@+id/data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="-10dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="997 603 303 MVA"
+                                android:textAlignment="textStart"
+                                android:textSize="17sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/data3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/roboto_condensed_bold"
+                                android:text="Single ticket"
+                                android:textSize="17sp" />
 
                         </LinearLayout>
 
