@@ -21,6 +21,7 @@ import java.util.Date;
 
 public class MyticketFragment extends Fragment {
 
+    private int timerCount;
     public TextView validToTEXT, zoneTEXT, timerTEXT, adultTEXT, kron1TEXT, kron2TEXT, dataTEXT, ticketTEXT;
     public ImageView pictureTEXT;
 
@@ -41,21 +42,36 @@ public class MyticketFragment extends Fragment {
 
 
         if (getArguments() != null) {
+            validToTEXT.setText(getArguments().getString("validTEXT"));
+            zoneTEXT.setText(getArguments().getString("zoneTEXT"));
+            timerTEXT.setText(getArguments().getString("timerSTR"));
+            timerCount = getArguments().getInt("timerDATA");
             adultTEXT.setText(getArguments().getString("adultTEXT"));
-            Toast.makeText(getContext(), getArguments().getString("adultTEXT"), Toast.LENGTH_SHORT).show();
+            kron1TEXT.setText(getArguments().getString("kronTEXT"));
+            kron2TEXT.setText(getArguments().getString("kronTEXT"));
+            dataTEXT.setText(getArguments().getString("dataTEXT"));
+            ticketTEXT.setText(getArguments().getString("ticketDATA"));
+
+            if (getArguments().getString("ticketDATA").equals("Single ticket")){
+                pictureTEXT.setBackgroundResource(R.drawable.ic_bus);
+            }
+            else {
+                pictureTEXT.setBackgroundResource(R.drawable.ic_boat);
+            }
+
 
         } else {
             validToTEXT.setText("Valid to 2/26/18 10:08");
             zoneTEXT.setText("Zone TROMSØ - Zone Vikran");
-            timerTEXT.setText("02:30:00");
+            timerTEXT.setText("02:20:00");
+            timerCount = 8400000;
             adultTEXT.setText("1 Adult");
-            kron1TEXT.setText("kr77.00");
-            kron2TEXT.setText("kr77.00");
+            kron1TEXT.setText("kr72.00");
+            kron2TEXT.setText("kr72.00");
             dataTEXT.setText("12 % vat. kr7.71\nVat.base kr64.29\nPaid by: Travel account\nPurchused: 2/26/18, 07:53");
             ticketTEXT.setText("Single ticket");
             pictureTEXT.setBackgroundResource(R.drawable.ic_bus);
 
-            Toast.makeText(getContext(), "1 Adult", Toast.LENGTH_SHORT).show();
 
         }
 
@@ -67,17 +83,15 @@ public class MyticketFragment extends Fragment {
     public void onStart() {
 
 
-        new CountDownTimer(9000000, 1000) {
+        new CountDownTimer(timerCount, 1000) {
 
             public void onTick(long millisUntilFinished) {
-               // timerTEXT.setText(String.valueOf(millisUntilFinished/ 1000));
+                // timerTEXT.setText(String.valueOf(millisUntilFinished/ 1000));
                 long millis = millisUntilFinished % 1000;
                 long second = (millisUntilFinished / 1000) % 60;
                 long minute = (millisUntilFinished / (1000 * 60)) % 60;
                 long hour = (millisUntilFinished / (1000 * 60 * 60)) % 24;
-
                 timerTEXT.setText(String.format("%02d:%02d:%02d", hour, minute, second, millis));
-
             }
 
             public void onFinish() {
@@ -85,6 +99,8 @@ public class MyticketFragment extends Fragment {
             }
 
         }.start();
+
+
 
         super.onStart();
     }

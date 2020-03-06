@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
     android:tag="unique_tag"
-    tools:context=".ui.settings.BlankFragment"
-    android:background="@android:color/white"  >
+    tools:context=".ui.settings.BlankFragment">
 
 
     <ScrollView
@@ -16,14 +16,320 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Выбрать время валидности билета:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGruop1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioBus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:text="1:30"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioBoat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2:00"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioBoat2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2:20"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/tile_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="#000000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Выберите пункт А и пункт Б:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="0.5"
+                    android:gravity="start|center_vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGruopA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp">
+
+                        <RadioButton
+                            android:id="@+id/boatA1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:checked="true"
+                            android:text="Tromsø Prostneset HB"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/boatA2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Lysnes HB"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/boatA3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Finnsnes HB"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/busA1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Tromsø"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/busA2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Finnsnes"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/busA3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Lysnes"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="0.5"
+                    android:gravity="end|center_vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioGruopB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/boatB1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+
+                            android:text="Tromsø\nProstneset HB"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/boatB2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:checked="true"
+                            android:text="Lysnes HB"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/boatB3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Finnsnes HB"
+                            android:textSize="16sp" />
+                        <RadioButton
+                            android:id="@+id/busB1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Tromsø"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/busB2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Finnsnes"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/busB3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Zone Lysnes"
+                            android:textSize="16sp" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tile_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="#000000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Количество пассажиров:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#303F9F"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/tile_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Сумма в кронах:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:text="77.44"
+                android:textAlignment="center"
+                android:textColor="#303F9F"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/tile_divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Выберите транспорт:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioTicket"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Single ticket"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Single Ticket\nBoat"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </RadioGroup>
 
             <Button
-                android:layout_marginTop="700dp"
                 android:id="@+id/buttonDONE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#1976D2"
+                android:text="DONE"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
