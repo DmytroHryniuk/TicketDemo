@@ -3,10 +3,11 @@ package com.hryniuk.dev;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.hryniuk.dev.ui.settings.BlankFragment;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -52,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.settingcustom) {
-            Toast.makeText(MainActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
 
+            FragmentManager fm = getSupportFragmentManager();
+            BlankFragment fragment = new BlankFragment();
+            fm.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit();
             return true;
         }
 
