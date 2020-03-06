@@ -81,7 +81,7 @@ public class BlankFragment extends Fragment {
                 Calendar cal = Calendar.getInstance();
                 cal.add(Calendar.MILLISECOND, timeData);
 
-                DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+                DateFormat df = new SimpleDateFormat("dd.MM.yyyy kk:mm");
                 String date = "Valid to " + df.format(cal.getTime());
 
                 //THIRD VAR
@@ -103,8 +103,8 @@ public class BlankFragment extends Fragment {
                 //DATA VAR
                 float percent12 = costFloat * 0.12f;
                 float rent = costFloat - percent12;
-                DateFormat df2 = new SimpleDateFormat("dd/MM/yyyy, HH:mm");
-                String dataTEXT = "12 % vat. kr"+ String.format("%.2f", percent12) +"\n" + "Vat.base kr" + String.format("%.2f", rent) + "\n" + "Paid by: Travel account\n" + "Purchused: " + df2.format(Calendar.getInstance().getTime());
+                DateFormat df2 = new SimpleDateFormat("dd.MM.yyyy, kk:mm");
+                String dataTEXT = "12 % vat. kr"+ String.format("%.2f", percent12) +"\n" + "Vat.base kr" + String.format("%.2f", rent) + "\n" + "Paid by: creditcard\n" + "Purchased: " + df2.format(Calendar.getInstance().getTime());
 
                 //TICKET VAR
                 int selectedIdTicket = radioGroupTicket.getCheckedRadioButtonId();

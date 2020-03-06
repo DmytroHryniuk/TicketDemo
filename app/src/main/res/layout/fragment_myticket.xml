@@ -55,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/roboto_condensed_bold"
-                        android:text="Valid to 2/26/18 10:08"
+                        android:text="Valid to 26.02.18 10:08"
                         android:textAlignment="center"
                         android:textColor="@android:color/background_dark"
                         android:textSize="20sp"
@@ -274,7 +274,7 @@
                                 android:layout_marginStart="15dp"
                                 android:layout_marginTop="5dp"
                                 android:fontFamily="@font/roboto"
-                                android:text="12 % vat. kr7.71\nVat.base kr64.29\nPaid by: Travel account\nPurchused: 2/26/18, 07:53"
+                                android:text="12 % vat. kr7.71\nVat.base kr64.29\nPaid by: creditcard\nPurchased: 2/26/18, 07:53"
                                 android:textAlignment="textStart"
                                 android:textSize="13sp" />
 
