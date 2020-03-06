@@ -52,7 +52,7 @@ public class MyticketFragment extends Fragment {
             dataTEXT.setText(getArguments().getString("dataTEXT"));
             ticketTEXT.setText(getArguments().getString("ticketDATA"));
 
-            if (getArguments().getString("ticketDATA").equals("Single ticket")){
+            if (getArguments().getString("ticketDATA").equals("Single Ticket\nBus")){
                 pictureTEXT.setBackgroundResource(R.drawable.ic_bus);
             }
             else {
@@ -69,7 +69,7 @@ public class MyticketFragment extends Fragment {
             kron1TEXT.setText("kr72.00");
             kron2TEXT.setText("kr72.00");
             dataTEXT.setText("12 % vat. kr7.71\nVat.base kr64.29\nPaid by: creditcard\nPurchased: 2.26.18, 07:53");
-            ticketTEXT.setText("Single ticket");
+            ticketTEXT.setText("Single Ticket\nBus");
             pictureTEXT.setBackgroundResource(R.drawable.ic_bus);
 
 

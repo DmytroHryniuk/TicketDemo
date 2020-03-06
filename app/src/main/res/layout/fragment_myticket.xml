@@ -348,7 +348,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="0dp"
                                 android:fontFamily="@font/roboto_condensed_bold"
-                                android:text="Single ticket"
+                                android:text="Single Ticket\nBus"
                                 android:textAlignment="center"
                                 android:textSize="17sp" />
 

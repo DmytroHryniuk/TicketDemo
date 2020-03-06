@@ -301,14 +301,15 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_gravity="center_vertical|center_horizontal"
                     android:id="@+id/radioButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_marginStart="30dp"
                     android:layout_weight="1"
                     android:checked="true"
-                    android:text="Single ticket"
+                    android:text="Single Ticket\nBus"
+                    android:textAlignment="center"
                     android:textSize="18sp" />
 
                 <RadioButton
