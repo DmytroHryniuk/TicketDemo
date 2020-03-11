@@ -80,7 +80,9 @@ public class BlankFragment extends Fragment {
 
                 if (radioButtonA.getText().equals(radioButtonB.getText())) {
 
-                    wayDATA = radioButtonA.getText().toString().toUpperCase();
+                    String temp =  radioButtonA.getText().toString().substring(5);
+                    wayDATA = "Zone "+temp.toUpperCase();
+
 
                 } else {
 
@@ -100,13 +102,13 @@ public class BlankFragment extends Fragment {
                     peoples = "1 Adult";
 
                 } else {
-                    peoples = countPeople + " Adults";
+                    peoples = countPeople + " Adult";
 
                 }
 
 
                 //COST VAR
-                String costSTR = editText2.getText().toString();
+                String costSTR = editText2.getText().toString().replace(".", ",");
                 float costFloat = Float.valueOf(editText2.getText().toString());
 
                 //DATA VAR
