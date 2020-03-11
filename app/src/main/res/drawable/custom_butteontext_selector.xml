@@ -5,7 +5,7 @@
     <!-- Focused and pressed -->
     <item android:state_checked="true"
 
-        android:color="#000000" />
+        android:color="#ffffff" />
 
     <!-- Unfocused and pressed -->
     <item android:state_checked="false"

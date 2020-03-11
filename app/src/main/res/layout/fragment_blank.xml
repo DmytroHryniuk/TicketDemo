@@ -270,7 +270,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="numberSigned"
+                android:inputType="numberDecimal"
                 android:text="77.44"
                 android:textAlignment="center"
                 android:textColor="#303F9F"

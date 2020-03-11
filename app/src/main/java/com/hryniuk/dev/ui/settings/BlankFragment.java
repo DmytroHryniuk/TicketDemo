@@ -74,9 +74,18 @@ public class BlankFragment extends Fragment {
                 int selectedIdB = radioGroupB.getCheckedRadioButtonId();
                 radioButtonB = (RadioButton) view.findViewById(selectedIdB);
 
-                String wayDATA = radioButtonA.getText() + " - " + radioButtonB.getText();
+
+                String wayDATA = "";
 
 
+                if (radioButtonA.getText().equals(radioButtonB.getText())) {
+
+                    wayDATA = radioButtonA.getText().toString().toUpperCase();
+
+                } else {
+
+                    wayDATA = radioButtonA.getText() + " - " + radioButtonB.getText();
+                }
                 //Valid VAR
                 Calendar cal = Calendar.getInstance();
                 cal.add(Calendar.MILLISECOND, timeData);
@@ -87,7 +96,7 @@ public class BlankFragment extends Fragment {
                 //THIRD VAR
                 String peoples = "";
                 String countPeople = editText.getText().toString();
-                if (countPeople.equals(1)) {
+                if (countPeople.equals("1")) {
                     peoples = "1 Adult";
 
                 } else {
@@ -103,8 +112,8 @@ public class BlankFragment extends Fragment {
                 //DATA VAR
                 float percent12 = costFloat * 0.12f;
                 float rent = costFloat - percent12;
-                DateFormat df2 = new SimpleDateFormat("dd.MM.yyyy, kk:mm");
-                String dataTEXT = "12 % vat. kr"+ String.format("%.2f", percent12) +"\n" + "Vat.base kr" + String.format("%.2f", rent) + "\n" + "Paid by: creditcard\n" + "Purchased: " + df2.format(Calendar.getInstance().getTime());
+                DateFormat df2 = new SimpleDateFormat("dd.MM.yyyy\nkk:mm");
+                String dataTEXT = "12 % vat. kr" + String.format("%.2f", percent12) + "\n" + "Vat.base kr" + String.format("%.2f", rent) + "\n" + "Paid by: creditcard\n" + "Purchased: " + df2.format(Calendar.getInstance().getTime());
 
                 //TICKET VAR
                 int selectedIdTicket = radioGroupTicket.getCheckedRadioButtonId();
@@ -122,7 +131,7 @@ public class BlankFragment extends Fragment {
                 args.putString("timerSTR", timeStrng);
                 args.putString("adultTEXT", peoples);
                 args.putString("zoneTEXT", wayDATA);
-                args.putString("kronTEXT", costSTR);
+                args.putString("kronTEXT", "kr" + costSTR);
                 args.putFloat("kronDATA", costFloat);
                 args.putString("dataTEXT", dataTEXT);
                 args.putString("ticketDATA", ticketDATA);
