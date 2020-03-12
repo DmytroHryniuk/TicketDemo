@@ -17,9 +17,14 @@ import android.widget.Toast;
 import com.hryniuk.dev.R;
 import com.hryniuk.dev.ui.myticket.MyticketFragment;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class BlankFragment extends Fragment {
     private int timeData;
@@ -109,8 +114,21 @@ public class BlankFragment extends Fragment {
 
                 //COST VAR
                 String costSTR = editText2.getText().toString().replace(".", ",");
-                float costFloat = Float.valueOf(editText2.getText().toString());
 
+                float costFloat = Float.valueOf(editText2.getText().toString());
+                //
+
+                DecimalFormat dfor = new DecimalFormat(
+                        "##,##0.00",
+                        new DecimalFormatSymbols(new Locale("pt", "BR")));
+
+                BigDecimal value = new BigDecimal(costFloat);
+
+
+                String tmpData2 = dfor.format(value.floatValue());
+                String tmpData3 = tmpData2.replace(".", " ");
+
+                //
                 //DATA VAR
                 float percent12 = costFloat * 0.12f;
                 float rent = costFloat - percent12;
@@ -133,14 +151,14 @@ public class BlankFragment extends Fragment {
                 args.putString("timerSTR", timeStrng);
                 args.putString("adultTEXT", peoples);
                 args.putString("zoneTEXT", wayDATA);
-                args.putString("kronTEXT", "kr" + costSTR);
+                args.putString("kronTEXT", "kr" + tmpData3); // costSTR
                 args.putFloat("kronDATA", costFloat);
                 args.putString("dataTEXT", dataTEXT);
                 args.putString("ticketDATA", ticketDATA);
                 fragment.setArguments(args);
 
 
-                //Toast.makeText(getActivity(), String.valueOf(cost), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), tmpData3, Toast.LENGTH_SHORT).show();
 
                 getFragmentManager().beginTransaction().add(R.id.nav_host_fragment, fragment).commit();
             }
